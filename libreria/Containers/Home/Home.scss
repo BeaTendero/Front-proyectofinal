@@ -31,7 +31,7 @@
     display: none;
   }
   
-  .movieShow {
+  .libroShow {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +46,7 @@
   
   
   
-  .moviePic:hover {
+  .libroPic:hover {
     height: 16em;
     width: 9em;
     transition: 0.3s;
