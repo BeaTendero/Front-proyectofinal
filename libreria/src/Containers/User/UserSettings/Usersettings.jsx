@@ -113,7 +113,7 @@ const UserSettings = () => {
       <div className="settingsBoxDesign">
 
 
-        <h1 className="updateTittleDesign">Actualiza tus credenciales</h1>
+        <h1 className="updateTittleDesign">Introduce tus credenciales.</h1>
         <form onSubmit={handleSubmit} className="formSquare2">
           <p>Nombre</p>
           <input
@@ -126,7 +126,7 @@ const UserSettings = () => {
             onInput={(e) => errorHandler(e.target.name, e.target.value, "text")}
           />
           
-          <p>Email</p>
+          <p>Email:</p>
           <input
             type="text"
             name="email"
@@ -139,8 +139,7 @@ const UserSettings = () => {
             }
           />
           <div className="errorInput">{userError.emailError}</div>
-         
-          <p>Password:</p>
+          <p>Contraseña:</p>
           <div className="updateInputs inputContainer">
             <input
               className="inputDesign passwordInput"
@@ -160,7 +159,7 @@ const UserSettings = () => {
             )}
           </div>
           <div className="errorInput">{userError.passwordError}</div>
-          <p>Repeat Your Password:</p>
+          <p>Repite tu contraseña:</p>
           <input
             type="password"
             name="password2"
@@ -180,8 +179,7 @@ const UserSettings = () => {
               onChange={() => setAcceptedTerms(!acceptedTerms)}
             />
 
-            <p> ¿ Estás seguro ?  </p>
-
+            <p> ¿Estás seguro ? </p>
           </div>
           <br></br>
           <input
@@ -212,10 +210,14 @@ const UserSettings = () => {
 
               </div>
             )
+
+
           })}
         </div>
       </div>
     </div>
+
+
   );
 };
 

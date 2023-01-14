@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { addSearch, cleanSearch } from "../../containers/Libros/LibrosSlice";
+import { addSearch, cleanSearch } from "../../../Containers/Home/Libros/LibrosSlice";
 import { searchLibros } from "../../services/apiCalls";
 import { useDispatch } from "react-redux";
 import './SearchBar.scss'

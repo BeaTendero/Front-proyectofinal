@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Register = () => {
 
-  const dataBase = "http://localhost:3001/";
+  const dataBase = "http://localhost:3008/";
 
   //Hooks
   const [user, setUser] = useState({
@@ -19,7 +19,7 @@ const Register = () => {
   });
 
   const [userError, setUserError] = useState({
-    nameError: "", 
+    nameError: "",
     emailError: "",
     passwordError: "",
     password2Error: "",
@@ -37,15 +37,20 @@ const Register = () => {
       let signIn = await axios.post(dataBase + "auth/register", {
         name: user.name,
         email: user.email,
-
         password: user.password,
         rolIdrol: "user"
       });
 
       signIn();
+
+
+
     } catch (error) {
       console.log('registro fallido')
     }
+
+
+
 
   };
 
@@ -100,27 +105,19 @@ const Register = () => {
             onInput={(e) => errorHandler(e.target.name, e.target.value, "text")}
           />
           <div className="errorInput">{userError.nameError}</div>
+        
           <input
             type="text"
-            name="surname"
+            name="email"
             className="registerInputs"
-            placeholder="Surname"
+            placeholder="Email"
             onChange={inputHandler}
-            onInput={(e) => errorHandler(e.target.name, e.target.value, "text")}
+            onInput={(e) =>
+              errorHandler(e.target.name, e.target.value, "email")
+            }
           />
-        
           <div className="errorInput">{userError.emailError}</div>
-          <input
-            type="number"
-            min="0"
-            max="150"
-            name="age"
-            className="registerInputs"
-            placeholder="Age"
-            onChange={inputHandler}
-            onInput={(e) => errorHandler(e.target.name, e.target.value, "age")}
-          />
-       
+
           <div className="registerInputs inputContainer">
             <input
               className="inputDesign passwordInput"

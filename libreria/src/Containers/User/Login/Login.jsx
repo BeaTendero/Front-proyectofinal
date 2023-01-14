@@ -19,7 +19,6 @@ const Login = () => {
   const dataBase = "http://localhost:3001/";
 
   //Instanciamos los métodos desestructurados importados al inicio del archivo:
-
   const navigate = useNavigate(); //Necesario para navegar
 
   const dispatch = useDispatch(); //Esto me permitirá usar el dispatch en cualquier momento en la Aplicacion para despachar ACCIONES de REDUX
@@ -42,7 +41,6 @@ const Login = () => {
 
   // HANDLERS
   const inputHandler = (e) => {
-
     //Aqui setearemos DINAMICAMENTE el BINDEO entre inputs y hook.
     setUser((prevState) => ({
       ...prevState,
@@ -104,6 +102,21 @@ const Login = () => {
 
   };
 
+
+  //Una vez que el backend nos da el Token, que tenemos que hacer? GUARDARLO en REDUX(Para que el Header, que tb esta conectado a REDUX, lo lea)
+  //COMO lo GUARDAMOS? con el DISPATCH:
+  //     dispatch(login({ credentials: userReduxCredentials }));//Este login lo hemos importado de userSlice
+
+  //     //Una vez haya hecho el dispatch, con un Settimeout(para que sea mas suave),
+  //     //nos redirigira a Home( ya que ya estaremos logeados):
+
+  //     setTimeout(() => {
+  //         navigate("/")
+  //     }, 1000);
+
+  // }
+
+  //PASSWORD-EYE
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
@@ -111,7 +124,7 @@ const Login = () => {
   return (
     <div className="loginDesign">
       <div className="inputsContainer">
-        <h1 className="loginTittleDesign">Por favor ingrese su usuario</h1>
+        <h1 className="loginTittleDesign">PLEASE ENTER YOUR DETAILS TO LOGIN</h1>
         <div>
           <input
             type="email"
@@ -150,7 +163,9 @@ const Login = () => {
         </div>
         <div className="errorMessage">{userError.passwordError}</div>
       </div>
-      <div onClick={() => logMe(user)} className="buttonDesign"> Login </div>
+      <div onClick={() => logMe(user)} className="buttonDesign">
+        Login me!
+      </div>
     </div>
   );
 };

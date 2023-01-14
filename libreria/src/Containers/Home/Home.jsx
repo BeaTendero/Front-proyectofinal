@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { bringLibros } from "../../services/apiCalls";
 import { useSelector, useDispatch } from "react-redux";
 import { userData } from "../User/userSlice";
-import { LibroData, addLibro } from "../Libros/LibrosSlice";
+import { LibroData, addLibro } from "../../../src/Containers/Home/Libros/LibrosSlice";
 
 
 import "./Home.scss";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../../Components/Header/SearchBar/SearchBar";
 
 
 const Home = () => {
