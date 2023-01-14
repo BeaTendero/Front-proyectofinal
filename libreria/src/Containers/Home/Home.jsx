@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
 
   const clickedLibro = (libro) => {
-    //Guardo la película seleccionada en redux.
+    //Guardo el libro seleccionado en redux.
 
     dispatch(addLibro({ ...libros, details: libros }));
 

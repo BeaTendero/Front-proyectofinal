@@ -36,3 +36,21 @@ export const bringUsers = async (jwt) => {
   })};
 
   return res.data;
+  export const eraseUser = async (notMail, jwt) => {
+    let res = await axios.delete(dataBase + "/users/deleteUser/" + notMail, {
+      headers: { Authorization: `Bearer ${jwt}` },
+    });
+  
+    return res.data;
+  };
+  
+  
+  export const rentLibro = async (body, jwt) => {
+    let res = await axios.post(
+      dataBase + "/orders/newOrderLibro", body, 
+        {headers: { Authorization: `Bearer ${jwt}` }},
+    );
+    console.log("Estoy dentro de rentLibro", res)
+    console.log(res.data)
+    return res;
+  };

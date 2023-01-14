@@ -124,7 +124,7 @@ const Login = () => {
   return (
     <div className="loginDesign">
       <div className="inputsContainer">
-        <h1 className="loginTittleDesign">PLEASE ENTER YOUR DETAILS TO LOGIN</h1>
+        <h1 className="loginTittleDesign">Por favor, Introduzca sus datos para iniciar sesión</h1>
         <div>
           <input
             type="email"
@@ -164,7 +164,7 @@ const Login = () => {
         <div className="errorMessage">{userError.passwordError}</div>
       </div>
       <div onClick={() => logMe(user)} className="buttonDesign">
-        Login me!
+        Iniciar sesión
       </div>
     </div>
   );
