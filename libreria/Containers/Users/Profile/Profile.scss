@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Garamond;
+  }
+  .menuDesign {
+    background: -webkit-linear-gradient(90deg, #24609b 10%, #8cc8ac 90%);
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .menuButtonDesign {
+    height: 4em;
+    width: 16em;
+    margin: 1em 0;
+    color: white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logOutDesign {
+    background-color: rgb(111, 148, 193);
+    color: rgb(171, 181, 204);
+  }
+  

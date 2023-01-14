@@ -1,0 +1,59 @@
+.headerDesign {
+    height: 10vh; //Le damos un 20x100
+    width: 100vw;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    background-color: rgb(64, 145, 118);
+  }
+  
+  .linkDesign {
+    opacity: 88%;
+    font-size: 1.9em;
+    background-color: #b6b7bae1;
+    color: rgb(255, 255, 255);
+   
+    border-radius: 120px;
+    padding: 0.2em;
+    margin: 0 0.8em 0 0;
+    cursor: pointer;
+    font-family: monospace;
+  }
+  
+  .linkDesign:hover {
+    color:rgb(131, 196, 220);
+    opacity: 100%;
+    font-size: 2em;
+  }
+  
+  
+  .inputDesign {
+    margin: 0.5em;
+    width: 40vw;
+    height: 5vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border-top-right-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+    background-color: rgb(237, 233, 233);
+    color: white;
+    font-family: Garamond;
+  }
+  
+  .inputDesign::placeholder {
+    color: rgb(220, 204, 204);
+  }
+  
+  @keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+  
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
