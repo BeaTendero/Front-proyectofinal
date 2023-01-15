@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { errorCheck } from "../../../services/errorManage";
+import { errorCheck } from "../../../Services/errorManage";
 import { useNavigate } from "react-router-dom";
 import "./Register.scss";
-import EyeIcon from "../../../components/icons/EyeIcon";
-import EyeSlashIcon from "../../../components/icons/EyeSlashIcon";
+import EyeIcon from "../../../Componentes/icons/Eyelcon";
+import EyeSlashIcon from "../../../Componentes/icons/EyeSlashIcon";
 import axios from "axios";
 
 const Register = () => {

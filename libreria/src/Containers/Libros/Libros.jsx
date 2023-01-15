@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { libroData } from "./LibrosSlice";
 import { userData } from "../User/userSlice";
 import { useNavigate } from 'react-router-dom';
-import { rentLibro } from '../../services/apiCalls';
+import { rentBook } from '../../services/apiCalls';
 
 const Libro = () => {
 
@@ -24,7 +24,7 @@ const Libro = () => {
         console.log("AQUI ESTA EL TITULO DE LIBRO SELECCIONADO", title)
         console.log("AQUI ESTA EL JWT", jwt)
         console.log("AQUI ESTA EL BODY", body)
-        rentLibro(body, jwt);
+        rentBook(body, jwt);
         navigate("/profile")//De momento solo va a home.
 
     }
@@ -36,17 +36,17 @@ const Libro = () => {
         navigate("/");
     }
 
-    if (selectedFilm?.id_movie !== undefined) {
+    if (selectedLibro?.id_book !== undefined) {
 
         return (
-            <div className="filmDesign">
-                {selectedFilm?.title}
-                <img className="filmPic" src={selectedFilm?.image} />
+            <div className="libroDesign">
+                {selectedLibro?.title}
+                <img className="libroPic" src={selectedLibro?.image} />
 
                 {credentials?.credentials?.jwt !== undefined &&
 
                     <div onClick={() => watchMe()} className='buttonDesign'>
-                        Rent me!
+                        Alquilar
                     </div>
 
                 }
@@ -59,7 +59,7 @@ const Libro = () => {
 
     } else {
         return (
-            <div className="filmDesign">
+            <div className="libroDesign">
                 <div>Ha Habido un error</div>
                 <div onClick={() => returnHome()} className='buttonDesign'>
                     Volver a Home

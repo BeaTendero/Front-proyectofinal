@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { addSearch, cleanSearch } from "../../../Containers/Home/Libros/LibrosSlice";
-import { searchLibros } from "../../services/apiCalls";
+import { addSearch, cleanSearch } from "../../Containers/Libros/LibrosSlice";
+import { searchBooks } from "../../Services/apiCalls";
 import { useDispatch } from "react-redux";
 import './SearchBar.scss'
 
@@ -26,7 +26,7 @@ const SearchBar = () => {
 
             //Debounce....
             const bring = setTimeout(() => {
-                searchLibros(criteria)
+                searchBooks(criteria)
                     .then(res => {
                         console.log("que ha pasado???? ", res);
 

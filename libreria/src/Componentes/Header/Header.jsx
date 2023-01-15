@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { userData } from "../../containers/User/userSlice";
-import { addSearch } from "../../../Containers/Home/Libros/LibrosSlice";
+import { addSearch } from "../../Containers/Libros/LibrosSlice";
 import './Header.scss'
 import { useNavigate } from 'react-router-dom';
-import { searchLibros } from '../../services/apiCalls';
+import { searchBooks } from '../../services/apiCalls';
 
 
 

@@ -1,46 +1,45 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { bringLibros } from "../../services/apiCalls";
+import { bringBooks } from "../../Services/apiCalls";
 import { useSelector, useDispatch } from "react-redux";
 import { userData } from "../User/userSlice";
-import { LibroData, addLibro } from "../../../src/Containers/Home/Libros/LibrosSlice";
-
+import {libroData, addLibro} from "../Libros/LibrosSlice"
 
 import "./Home.scss";
-import SearchBar from "../../Components/Header/SearchBar/SearchBar";
+import SearchBar from "../../Componentes/SearchBar/SearchBar";
 
 
 const Home = () => {
   //Me conecto a RDX en modo lectura.
-  const LibrosFromRdx = useSelector(LibroData);
+  const LibrosFromRdx = useSelector(libroData);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   //Hooks
-  const [libros, setLibros] = useState([]);
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
     console.log("soy los libros de redux", LibrosFromRdx)
-    if (libros.length === 0) {
-      bringLibros()
-        .then((libros) => {
-          setLibros(libros);
+    if (books.length === 0) {
+      bringBooks()
+        .then((books) => {
+          setBooks(books);
         })
         .catch((error) => console.log(error));
     }
   }, []);
 
-  const clickedLibro = (libro) => {
+  const clickedBook = (book) => {
     //Guardo el libro seleccionado en redux.
 
-    dispatch(addLibro({ ...libros, details: libros }));
+    dispatch(addLibro({ ...book, details: book }));
 
     setTimeout(() => {
       navigate("/libro");
     }, 750);
   };
 
-  if (libros.length === 0) {
+  if (books.length === 0) {
     return <div className="homeDesign">soy Home</div>;
   } else if(LibrosFromRdx.details.length > 0){
 
@@ -54,14 +53,14 @@ const Home = () => {
         <SearchBar />
         <h1 className="titleDesign"> Prestamo de libros</h1>
         <div className="homeDesign">
-          {LibrosFromRdx.details.map((libro) => {
+          {LibrosFromRdx.details.map((book) => {
             return (
               <div
-                onClick={() => clickedLibro(libro)}
-                className="libroShow">
+                onClick={() => clickedBook(book)}
+                className="bookShow">
                 <img
-                  className="libroPic"
-                  src={libro.image}
+                  className="bookPic"
+                  src={book.image}
                 />
               </div>
             );
@@ -84,14 +83,14 @@ const Home = () => {
         <SearchBar />
         <h1 className="titleDesign"> Prestamo de libros</h1>
         <div className="homeDesign">
-          {libros.map((libro) => {
+          {books.map((book) => {
             return (
               <div
-                onClick={() => clickedLibro(libro)}
-                className="libroShow">
+                onClick={() => clickedBook(book)}
+                className="bookShow">
                 <img
-                  className="libroPic"
-                  src={libro.image}
+                  className="bookPic"
+                  src={book.image}
                 />
               </div>
             );
