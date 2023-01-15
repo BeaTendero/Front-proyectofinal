@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { libroData } from "./LibrosSlice";
 import { userData } from "../User/userSlice";
 import { useNavigate } from 'react-router-dom';
-import { rentBook } from '../../services/apiCalls';
+import { rentBook } from "../../Services/apiCalls";
 
 const Libro = () => {
 
