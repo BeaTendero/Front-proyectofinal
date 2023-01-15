@@ -26,7 +26,7 @@ const Profile = () => {
         Prestamo de Libros
       </div>
       
-      <div className="menuButtonDesign" onClick={() => navigate("/userSettings")}>
+      <div className="menuButtonDesign" onClick={() => navigate("/UserSettings")}>
         Configuración de usuario
       </div>
       <div className="menuButtonDesign logOutDesign" onClick={logout}>

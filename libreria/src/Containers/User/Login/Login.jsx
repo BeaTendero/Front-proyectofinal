@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux"; //Son métodos desestruc
 import { userData, login } from "../userSlice"; // Esto lo importamos desde userSlice. Nos hace falta para el useSelector
 //Nos estamos trayendo el ESTADO(el ALMACEN, la zona donde se guarda la info)
 import { loginUser } from "../../../Services/apiCalls";
-import { errorCheck } from "../../../services/errorManage";
+import { errorCheck } from "../../../Services/errorManage";
 import "./Login.scss";
 
 import EyeIcon from "../../../components/icons/EyeIcon";

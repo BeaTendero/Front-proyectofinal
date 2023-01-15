@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { errorCheck } from "../../../services/errorManage";
 import { useNavigate } from "react-router-dom";
-import "./userSettings.scss";
+import "./Usersettings.scss";
 import EyeIcon from "../../../components/icons/EyeIcon";
 import EyeSlashIcon from "../../../components/icons/EyeSlashIcon";
-import "./userSettings.scss"
+
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
 import { bringUsers, eraseUser, updateUser } from "../../../services/apiCalls"
