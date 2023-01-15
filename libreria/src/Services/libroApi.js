@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const bookApi = axios.create({
+export const libroApi = axios.create({
     baseURL: "",
 });
 

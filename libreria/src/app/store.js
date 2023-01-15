@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userSlice from '../containers/User/userSlice';
+import userSlice from '../Containers/User/userSlice';
 import LibrosSlice from '../Containers/Libros/LibrosSlice';
 
 
 export default configureStore({
     reducer: {
-        user: userSlice,
+        // user: userSlice,
         libro: LibrosSlice,
         
 
