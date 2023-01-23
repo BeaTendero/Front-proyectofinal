@@ -8,9 +8,8 @@ import { loginUser } from "../../../Services/apiCalls";
 import { errorCheck } from "../../../Services/errorManage";
 import "./Login.scss";
 
-import EyeIcon from "../../../components/icons/EyeIcon";
-import EyeSlashIcon from "../../../components/icons/EyeSlashIcon";
-
+import EyeIcon from "../../../Componentes/icons/Eyelcon"
+import EyeSlashIcon from "../../../Componentes/icons/EyeSlashIcon";
 
 
 const Login = () => {
