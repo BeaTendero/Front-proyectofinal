@@ -50,6 +50,7 @@ export const eraseUser = async (notMail, jwt) => {
 };
 
 
+
 export const rentBook = async (body, jwt) => {
   let res = await axios.post(
     dataBase + "/orders/newOrderBook", body,

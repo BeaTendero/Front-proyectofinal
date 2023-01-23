@@ -7,8 +7,7 @@ import EyeSlashIcon from "../../../Componentes/icons/EyeSlashIcon";
 
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
-// import { bringUsers, eraseUser, updateUsers } from "../../../services/userSlice";
-
+import { bringUsers, eraseUser, updateUser } from "../../../services/userSlice";
 
 const UserSettings = () => {
 
@@ -117,7 +116,7 @@ const UserSettings = () => {
 
         <h1 className="updateTittleDesign">Introduce tus credenciales.</h1>
         <form onSubmit={handleSubmit} className="formSquare2">
-          <p>Nombre</p>
+          <p>Nombre:</p>
           <input
             type="text"
             name="name"
