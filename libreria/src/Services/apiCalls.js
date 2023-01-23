@@ -1,7 +1,7 @@
 import axios from "axios";
 import { libroApi } from "./libroApi";
 
-const dataBase = "mysql://${{ MYSQLUSER }}:${{ MYSQLPASSWORD }}@${{ MYSQLHOST }}:${{ MYSQLPORT }}/${{ MYSQLDATABASE }}";
+const dataBase = "http :// localhost:3001";
 
 export const loginUser = async (user) => {
   //el user se lo he metido cuando he implementado la funcion en la otra funcion logMe
@@ -23,9 +23,12 @@ export const bringBooks = async () => {
 };
 
 export const searchBooks = async (criteria) => {
-  let res = await axios.get(dataBase + "/books/title/" + criteria);
-  console.log("AQUIELRES", res.data);
-  return res.data;
+  // let res = await axios.get(dataBase + "/books/title/" + criteria);
+  // console.log("AQUIELRES", res.data);
+  // return res.data;
+  const res = await libroApi.get(``);
+
+  return res.data.results;
 };
 
 

@@ -5,7 +5,7 @@ import LibrosSlice from '../Containers/Libros/LibrosSlice';
 
 export default configureStore({
     reducer: {
-        // user: userSlice,
+         user: userSlice,
         libro: LibrosSlice,
         
 

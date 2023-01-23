@@ -7,7 +7,8 @@ import EyeSlashIcon from "../../../components/icons/EyeSlashIcon";
 
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
-import { bringUsers, eraseUser, updateUser } from "../../../services/apiCalls"
+import { bringUsers, eraseUser, updateUsers } from "../../../services/apiCalls"
+
 const UserSettings = () => {
 
   const userReduxCredentials = useSelector(userData);
