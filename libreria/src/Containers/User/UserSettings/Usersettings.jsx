@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { errorCheck } from "../../../services/errorManage";
 import { useNavigate } from "react-router-dom";
 import "./Usersettings.scss";
-import EyeIcon from "../../../components/icons/EyeIcon";
-import EyeSlashIcon from "../../../components/icons/EyeSlashIcon";
+import EyeIcon from "../../../Componentes/icons/Eyelcon";
+import EyeSlashIcon from "../../../Componentes/icons/EyeSlashIcon";
 
 import { useSelector } from "react-redux";
 import { userData } from "../userSlice";
-import { bringUsers, eraseUser, updateUsers } from "../../../services/apiCalls"
+// import { bringUsers, eraseUser, updateUsers } from "../../../services/userSlice";
+
 
 const UserSettings = () => {
 
